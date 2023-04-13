@@ -18,12 +18,12 @@
             background-position: center
             background-attachment: fixed
 
-            &--content
+            &__content
                 @include flexOr
                 align-items: flex-end
                 justify-content: space-between
 
-            &--caption
+            &__caption
                 @include flexVert
                 gap: 40px
                 position: relative
@@ -44,7 +44,7 @@
                     span
                         font-weight: 700
 
-            &--list
+            &__list
                 @include flexVert
                 gap: 12px
                 list-style: none
@@ -72,14 +72,14 @@
                         background-size: cover
                         background-position: center
 
-            &--image
+            &__image
                 flex-basis: 40%
 
-            &--front
+            &__front
                 margin: auto
                 width: 80%
 
-            &--return
+            &__return
                 @include type(12px, 3.4, 400)
                 @include roboto
                 color: $blueMedia
@@ -116,7 +116,7 @@
                 text-align: center
                 display: block
 
-            &--icon
+            &__icon
                 width: 160px
                 height: 62px
                 transition: all 300ms ease-in-out
@@ -138,12 +138,12 @@
                 &:first-of-type
                     margin-top: 65px
 
-            &--cards
+            &__cards
                 @include container(65, 65, 65, 65)
                 @include flexOr
                 gap: 48px
 
-            &--card
+            &__card
                 flex: 1 1 0
                 @include flexVert
                 align-items: center
@@ -153,8 +153,8 @@
                     margin-top: 0
                     @include roboto
 
-                    &.lpGuide--card
-                        &--num
+                    &.lpGuide__card
+                        &__num
                             @include type(14px, 2.2, 500)
                             height: 30px
                             width: 30px
@@ -162,10 +162,10 @@
                             border-radius: 50%
                             color: $white
 
-                        &--headline
+                        &__headline
                             @include type(16px, 1.25, 500)
 
-                        &--text
+                        &__text
                             @include type(14px, 1.25, 400)
                             color: $grey6
 
@@ -175,11 +175,11 @@
                                 &:hover
                                     color: $blueMedia
 
-            &--icon
+            &__icon
                 height: 64px
                 width: 64px
 
-            &--conditions
+            &__conditions
                 background-color: $grey0
                 height: 56px
 
@@ -213,7 +213,7 @@
                 @include roboto
                 margin-top: 0
 
-            &--img
+            &__img
                 box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15)
 
         &Faq
@@ -228,12 +228,12 @@
                 text-align: center
                 color: $blueAlza
 
-            &--units
+            &__units
                 @include flexVert
                 gap: 16px
                 width: 100%
 
-            &--box 
+            &__box 
                 background-color: $white
                 border-radius: 8px
                 box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15)
@@ -244,7 +244,7 @@
                 &:hover
                     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
 
-                &--handle 
+                &__handle 
                     @include flexOr
                     gap: 16px
 
@@ -253,7 +253,7 @@
                         @include roboto
                         color: $blueMedia                
 
-                &--content 
+                &__content 
                     padding: 0 36px
                     max-height: 0
                     overflow: hidden
@@ -267,15 +267,15 @@
                         margin-top: 0
 
                 
-                &__active 
-                    .lpFaq--box--content 
+                &--active 
+                    .lpFaq__box__content 
                         padding: 8px 36px 20px
                         opacity: 1
 
-                    .lpFaq--box--icon
+                    .lpFaq__box__icon
                         transform: rotate(0deg)
 
-                &--icon
+                &__icon
                     width: 20px
                     min-width: 20px
                     height: 20px
@@ -292,16 +292,16 @@
 .layout-0 #landingpage
     .lp
         &Header
-            &--content
+            &__content
                 justify-content: space-between
 
-            &--front
+            &__front
                 width: 100%
 
-            &--return
+            &__return
                 top: 4%
 
-        &Guide--card--headline
+        &Guide__card__headline
             height: 30px
 
 @media only screen and (max-width: 1035px)
@@ -309,19 +309,19 @@
     .mobileapp #landingpage
         .lp
             &Header
-                &--return
+                &__return
                     top: 4%
 
-                &--front
+                &__front
                     width: 100%
 
             &Brands
-                &--icon
+                &__icon
                     width: 100%
 
             &Guide
-                &--card
-                    &--headline
+                &__card
+                    &__headline
                         height: 40px
 
 @media only screen and (max-width: 845px)
@@ -331,10 +331,10 @@
             &Header
                 @include container(65, 15, 65, 65)
 
-                &--image
+                &__image
                     transform: translate(0, 4%) scale(1)
                 
-                &--caption
+                &__caption
                     flex-basis: 60%
 
                     h1
@@ -343,16 +343,16 @@
                     p
                         @include type(18px, 1.5, 400)
 
-                &--list
+                &__list
                     li
                         @include type(14px, 1.5, 400)
 
-                &--image
+                &__image
                     flex-basis: 40%
 
             &Guide
-                &--card
-                    &--headline
+                &__card
+                    &__headline
                         height: 50px
 
                 h2
@@ -371,11 +371,11 @@
                 background-attachment: unset
                 display: block
 
-                &--content
+                &__content
                     @include flexVert
                     gap: 65px
 
-                &--caption
+                &__caption
                     flex-basis: 100%
                     align-items: center
 
@@ -385,25 +385,25 @@
                     h1, p
                         text-align: center
 
-                &--image
+                &__image
                     flex-basis: 100%
 
-                &--return
+                &__return
                     top: 4.5%
 
             &Brands
                 @include container(30, 0, 30, 0)
 
             &Guide
-                &--cards
+                &__cards
                     flex-direction: column
                     align-items: center
                     gap: 65px
 
-                &--card
+                &__card
                     max-width: 400px
 
-                    &--headline
+                    &__headline
                         height: unset
 
 @media only screen and (max-width: 450px)
@@ -420,7 +420,7 @@
                 gap: 32px
 
             &Guide
-                &--cards
+                &__cards
                     @include container(65, 25, 65, 25)
 
             &Screen

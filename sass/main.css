@@ -10,76 +10,82 @@
   display: block;
 }
 
-.article .alzaDialogBody .lpFooter--wrapper {
+.article .alzaDialogBody .lpFooter__wrapper {
   display: none;
 }
 
 #landingpage {
   display: block;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: #212121;
 }
-
 #landingpage *, #landingpage *::before, #landingpage *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 #landingpage h1, #landingpage h2, #landingpage h3, #landingpage h4, #landingpage p, #landingpage ul, #landingpage ol, #landingpage li, #landingpage figure {
   margin: 0;
   padding: 0;
 }
-
 #landingpage input, #landingpage button, #landingpage textarea, #landingpage select {
   font: inherit;
 }
-
 #landingpage .hidden {
   display: none !important;
 }
-
 #landingpage.blank p {
   margin-top: 0;
 }
-
 #landingpage a {
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
 #landingpage img {
   display: block;
   height: auto;
   max-width: 100%;
   aspect-ratio: attr(width), attr(height);
 }
-
 #landingpage #h1c {
   display: none !important;
 }
 
 #layout_switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 20px;
   top: 20px;
   z-index: 100;
+  width: 180px;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
 }
-
 #layout_switch button {
-  display: block;
-  color: #fff;
-  background: red;
-  font-size: 10px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  margin-bottom: 5px;
-  -webkit-box-shadow: 0px 4px 10px 0px #44030355;
-          box-shadow: 0px 4px 10px 0px #44030355;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
   cursor: pointer;
   border: none;
+}
+#layout_switch button .icon {
+  width: 30px;
+  height: 30px;
+  fill: #737373;
+}
+#layout_switch button.active {
+  box-shadow: inset 0px 2px 4px 0px rgba(128, 128, 128, 0.7);
 }
 
 #landingpage {
@@ -90,8 +96,7 @@
   background: #FFFFFF;
   font-size: 16px;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -103,21 +108,22 @@
   width: 1035px;
 }
 
-.mobile #articlePage #landingpage .lp-container {
+.mobile #articlePage #landingpage,
+.lp-container {
   max-width: 100%;
 }
 
 /**
- * Swiper 5.3.0
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://swiperjs.com
- *
- * Copyright 2014-2020 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: January 11, 2020
- */
+ * * Swiper 5.3.0
+ * * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * * http://swiperjs.com
+ * *
+ * * Copyright 2014-2020 Vladimir Kharlampidi
+ * *
+ * * Released under the MIT License
+ * *
+ * * Released on: January 11, 2020
+ * */
 .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -128,10 +134,7 @@
 }
 
 .swiper-container-vertical > .swiper-wrapper {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .swiper-wrapper {
@@ -139,53 +142,36 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-          transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
 }
 
 .swiper-container-multirow > .swiper-wrapper {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .swiper-container-multirow-column > .swiper-wrapper {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .swiper-container-free-mode > .swiper-wrapper {
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
   margin: 0 auto;
 }
 
 .swiper-slide {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 100%;
   height: 100%;
   position: relative;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 
 .swiper-slide-invisible-blank {
@@ -198,18 +184,12 @@
 }
 
 .swiper-container-autoheight .swiper-wrapper {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-transition-property: height, -webkit-transform;
-  transition-property: height, -webkit-transform;
+  align-items: flex-start;
   transition-property: transform, height;
-  transition-property: transform, height, -webkit-transform;
 }
 
 .swiper-container-3d {
-  -webkit-perspective: 1200px;
-          perspective: 1200px;
+  perspective: 1200px;
 }
 
 .swiper-container-3d .swiper-cube-shadow,
@@ -219,8 +199,7 @@
 .swiper-container-3d .swiper-slide-shadow-right,
 .swiper-container-3d .swiper-slide-shadow-top,
 .swiper-container-3d .swiper-wrapper {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom,
@@ -237,22 +216,18 @@
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -271,14 +246,14 @@
 }
 
 .swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 .swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  root---swiper-navigation-size: 44px;
+  scroll-snap-type: y mandatory;
+}
+.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper :root {
+  --swiper-navigation-size: 44px;
 }
 
 .swiper-button-next,
@@ -290,15 +265,9 @@
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
 
@@ -358,10 +327,8 @@
 .swiper-pagination {
   position: absolute;
   text-align: center;
-  -webkit-transition: 0.3s opacity;
   transition: 0.3s opacity;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   z-index: 10;
 }
 
@@ -383,39 +350,32 @@
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transform: scale(0.33);
-          transform: scale(0.33);
+  transform: scale(0.33);
   position: relative;
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-  -webkit-transform: scale(0.66);
-          transform: scale(0.66);
+  transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-  -webkit-transform: scale(0.33);
-          transform: scale(0.33);
+  transform: scale(0.33);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-  -webkit-transform: scale(0.66);
-          transform: scale(0.66);
+  transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-  -webkit-transform: scale(0.33);
-          transform: scale(0.33);
+  transform: scale(0.33);
 }
 
 .swiper-pagination-bullet {
@@ -431,8 +391,7 @@ button.swiper-pagination-bullet {
   border: none;
   margin: 0;
   padding: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -450,8 +409,7 @@ button.swiper-pagination-bullet {
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;
   top: 50%;
-  -webkit-transform: translate3d(0px, -50%, 0);
-          transform: translate3d(0px, -50%, 0);
+  transform: translate3d(0px, -50%, 0);
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -461,17 +419,13 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 8px;
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  -webkit-transition: 0.2s top, 0.2s -webkit-transform;
-  transition: 0.2s top, 0.2s -webkit-transform;
   transition: 0.2s transform, 0.2s top;
-  transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -480,23 +434,16 @@ button.swiper-pagination-bullet {
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   white-space: nowrap;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 0.2s left, 0.2s -webkit-transform;
-  transition: 0.2s left, 0.2s -webkit-transform;
   transition: 0.2s transform, 0.2s left;
-  transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
 
 .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 0.2s right, 0.2s -webkit-transform;
-  transition: 0.2s right, 0.2s -webkit-transform;
   transition: 0.2s transform, 0.2s right;
-  transition: 0.2s transform, 0.2s right, 0.2s -webkit-transform;
 }
 
 .swiper-pagination-progressbar {
@@ -511,15 +458,12 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
+  transform: scale(0);
+  transform-origin: left top;
 }
 
 .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
+  transform-origin: right top;
 }
 
 .swiper-container-horizontal > .swiper-pagination-progressbar,
@@ -596,15 +540,9 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -613,8 +551,7 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > svg {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .swiper-slide-zoomed {
@@ -630,12 +567,9 @@ button.swiper-pagination-bullet {
   margin-left: -21px;
   margin-top: -21px;
   z-index: 10;
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-  -webkit-animation: swiper-preloader-spin 1s infinite linear;
-          animation: swiper-preloader-spin 1s infinite linear;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  transform-origin: 50%;
+  animation: swiper-preloader-spin 1s infinite linear;
+  box-sizing: border-box;
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
   border-radius: 50%;
   border-top-color: transparent;
@@ -649,20 +583,11 @@ button.swiper-pagination-bullet {
   --swiper-preloader-color: #000;
 }
 
-@-webkit-keyframes swiper-preloader-spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes swiper-preloader-spin {
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .swiper-container .swiper-notification {
   position: absolute;
   left: 0;
@@ -673,13 +598,11 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .swiper-container-fade .swiper-slide {
   pointer-events: none;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -702,8 +625,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform-origin: 0 0;
   width: 100%;
   height: 100%;
 }
@@ -713,8 +635,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
+  transform-origin: 100% 0;
 }
 
 .swiper-container-cube .swiper-slide-active,
@@ -784,236 +705,177 @@ button.swiper-pagination-bullet {
 #landingpage .lpCarousel {
   position: relative;
 }
-
 #landingpage .lpCarousel .swiper {
   max-width: 100%;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #ffffff), to(#f8f8f8));
   background: linear-gradient(to bottom, #ffffff 70%, #f8f8f8 100%);
   border-radius: 4px;
   padding: 60px;
   overflow: hidden;
 }
-
 #landingpage .lpCarousel .swiper h2 {
   padding-bottom: 32px;
   text-align: center;
   font-size: 30px;
   line-height: 37.5px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #00275b;
 }
-
 #landingpage .lpCarousel .swiper-container {
   height: auto;
   padding: 24px 10px;
   margin: 0 auto;
   overflow: hidden;
 }
-
 #landingpage .lpCarousel .swiper-wrapper {
   padding-bottom: 10px;
   width: 100%;
   margin: 0 auto;
   height: auto;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide {
   border-radius: 6px;
   cursor: pointer;
   height: auto;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
   padding: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 16px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-decoration: none;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide p {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: unset;
   color: #212121;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide p.swiper-product-name {
   min-height: 84px;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide .swiper-product-img {
   margin-bottom: 10px;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide p.swiper-product-cprice {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide p.swiper-product-cprice.noValue {
   display: none;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide p.swiper-product-price {
   color: #F00000;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-
 #landingpage .lpCarousel .swiper a.swiper-slide:hover {
-  -webkit-box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
-
 #landingpage .lpCarousel .swiper-product-prices {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 12px;
 }
-
 #landingpage .lpCarousel .swiper-product-cprice {
   position: relative;
 }
-
 #landingpage .lpCarousel .swiper-product-cprice::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 45%;
   left: 50%;
   width: 100%;
   height: 1px;
   background: #414042;
-  -webkit-transform: translate(-50%, -50%) rotateZ(-12deg);
-          transform: translate(-50%, -50%) rotateZ(-12deg);
+  transform: translate(-50%, -50%) rotateZ(-12deg);
 }
-
 #landingpage .lpCarousel .swiper .swiper-pagination {
   bottom: auto;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
-
 #landingpage .lpCarousel .swiper .swiper-pagination-bullet {
   margin-right: 5px;
 }
-
 #landingpage .lpCarousel .swiper .swiper-pagination-bullet:last-of-type {
   margin-right: 0;
 }
-
 #landingpage .lpCarousel .swiper .swiper-pagination-bullet {
   opacity: 1;
   background: #E8E8E8;
   width: 12px;
   height: 12px;
 }
-
 #landingpage .lpCarousel .swiper .swiper-pagination-bullet-active {
   background-color: #0094e7;
   opacity: 1;
 }
-
 #landingpage .lpCarousel .swiper .swiper-pagination-bullet:focus,
 #landingpage .lpCarousel .swiper .swiper-pagination-bullet-active:focus {
   outline: transparent;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-next, #landingpage .lpCarousel .swiper .swiper-button-prev {
   top: 50%;
   height: 32px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-next:focus, #landingpage .lpCarousel .swiper .swiper-button-prev:focus {
   outline: transparent;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev,
 #landingpage .lpCarousel .swiper .swiper-container-rtl .swiper-button-next,
 #landingpage .lpCarousel .swiper .swiper-button-next,
 #landingpage .lpCarousel .swiper .swiper-container-rtl .swiper-button-prev {
   background-image: none;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev:after,
 #landingpage .lpCarousel .swiper .swiper-button-next:after {
   display: none;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev,
 #landingpage .lpCarousel .swiper .swiper-button-next {
   width: 25px;
   height: 60px;
   background-color: #0094e7;
   border-radius: 0 4px 4px 0;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   margin: 0;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev:hover,
 #landingpage .lpCarousel .swiper .swiper-button-next:hover {
   background-color: #25b1ff;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev .swiper-button-img,
 #landingpage .lpCarousel .swiper .swiper-button-next .swiper-button-img {
   width: 12px;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev .swiper-button-img path,
 #landingpage .lpCarousel .swiper .swiper-button-next .swiper-button-img path {
   fill: #ffffff;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev {
   left: 0;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-prev .swiper-button-img {
   margin-left: 4px;
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-next {
   right: 0;
   border-radius: 4px 0 0 4px;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
 #landingpage .lpCarousel .swiper .swiper-button-next .swiper-button-img {
   margin-right: 4px;
 }
@@ -1038,29 +900,23 @@ button.swiper-pagination-bullet {
   }
   .mobile #landingpage .lpCarousel .swiper a.swiper-slide:hover,
   .mobileapp #landingpage .lpCarousel .swiper a.swiper-slide:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }
-
 @media only screen and (max-width: 560px) {
   .mobile #landingpage .lpCarousel .swiper a.swiper-slide,
   .mobileapp #landingpage .lpCarousel .swiper a.swiper-slide {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .mobile #landingpage .lpCarousel .swiper a.swiper-slide p.swiper-product-name,
   .mobileapp #landingpage .lpCarousel .swiper a.swiper-slide p.swiper-product-name {
     min-height: unset;
   }
 }
-
 #landingpage {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #212121;
 }
-
 #landingpage .lpHeader {
   padding-top: 65px;
   padding-right: 65px;
@@ -1072,117 +928,82 @@ button.swiper-pagination-bullet {
   background-position: center;
   background-attachment: fixed;
 }
-
-#landingpage .lpHeader--content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#landingpage .lpHeader__content {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
 }
-
-#landingpage .lpHeader--caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#landingpage .lpHeader__caption {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 40px;
   position: relative;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
 }
-
-#landingpage .lpHeader--caption h1 {
+#landingpage .lpHeader__caption h1 {
   font-size: 52px;
   line-height: 65px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
 }
-
-#landingpage .lpHeader--caption p {
+#landingpage .lpHeader__caption p {
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #00275b;
   margin-top: 0;
   width: 70%;
 }
-
-#landingpage .lpHeader--caption p span {
+#landingpage .lpHeader__caption p span {
   font-weight: 700;
 }
-
-#landingpage .lpHeader--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#landingpage .lpHeader__list {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 12px;
   list-style: none;
   margin-left: 32px;
 }
-
-#landingpage .lpHeader--list li {
+#landingpage .lpHeader__list li {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
   position: relative;
 }
-
-#landingpage .lpHeader--list li span {
+#landingpage .lpHeader__list li span {
   font-weight: 700;
 }
-
-#landingpage .lpHeader--list li::before {
+#landingpage .lpHeader__list li::before {
   background-image: url("https://cdn.alza.cz/Foto/or/lp/moznost-vraceni-do-90-dnu/img/marker.svg");
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   position: absolute;
   top: 12px;
   left: -32px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
-#landingpage .lpHeader--image {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+#landingpage .lpHeader__image {
+  flex-basis: 40%;
 }
-
-#landingpage .lpHeader--front {
+#landingpage .lpHeader__front {
   margin: auto;
   width: 80%;
 }
-
-#landingpage .lpHeader--return {
+#landingpage .lpHeader__return {
   font-size: 12px;
   line-height: 40.8px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #0094e7;
   text-decoration: underline;
   display: block;
@@ -1196,9 +1017,8 @@ button.swiper-pagination-bullet {
   text-align: center;
   cursor: pointer;
 }
-
-#landingpage .lpHeader--return::before {
-  content: '';
+#landingpage .lpHeader__return::before {
+  content: "";
   width: 0;
   height: 0;
   position: absolute;
@@ -1207,12 +1027,9 @@ button.swiper-pagination-bullet {
   border-right: 21px solid #ffffff;
   border-bottom: 20px solid transparent;
 }
-
-#landingpage .lpHeader--return:hover {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+#landingpage .lpHeader__return:hover {
+  transform: translateX(-10px);
 }
-
 #landingpage .lpLogo {
   padding-top: 24px;
   padding-right: 0px;
@@ -1220,84 +1037,56 @@ button.swiper-pagination-bullet {
   padding-left: 0px;
   background-color: #f8f8f8;
 }
-
 #landingpage .lpLogo a {
   text-align: center;
   display: block;
 }
-
-#landingpage .lpLogo--icon {
+#landingpage .lpLogo__icon {
   width: 160px;
   height: 62px;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
-#landingpage .lpLogo--icon:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+#landingpage .lpLogo__icon:hover {
+  transform: scale(1.1);
 }
-
 #landingpage .lpGuide {
   text-align: center;
 }
-
 #landingpage .lpGuide h2 {
   font-size: 30px;
   line-height: 37.5px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #00275b;
 }
-
 #landingpage .lpGuide h2:last-of-type {
   margin-top: 15px;
 }
-
 #landingpage .lpGuide h2:first-of-type {
   margin-top: 65px;
 }
-
-#landingpage .lpGuide--cards {
+#landingpage .lpGuide__cards {
   padding-top: 65px;
   padding-right: 65px;
   padding-bottom: 65px;
   padding-left: 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 48px;
 }
-
-#landingpage .lpGuide--card {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+#landingpage .lpGuide__card {
+  flex: 1 1 0;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
-
-#landingpage .lpGuide--card p {
+#landingpage .lpGuide__card p {
   margin-top: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
-#landingpage .lpGuide--card p.lpGuide--card--num {
+#landingpage .lpGuide__card p.lpGuide__card__num {
   font-size: 14px;
   line-height: 30.8px;
   font-weight: 500;
@@ -1307,218 +1096,153 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   color: #ffffff;
 }
-
-#landingpage .lpGuide--card p.lpGuide--card--headline {
+#landingpage .lpGuide__card p.lpGuide__card__headline {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
 }
-
-#landingpage .lpGuide--card p.lpGuide--card--text {
+#landingpage .lpGuide__card p.lpGuide__card__text {
   font-size: 14px;
   line-height: 17.5px;
   font-weight: 400;
   color: #212121;
 }
-
-#landingpage .lpGuide--card p.lpGuide--card--text a {
+#landingpage .lpGuide__card p.lpGuide__card__text a {
   color: #212121;
 }
-
-#landingpage .lpGuide--card p.lpGuide--card--text a:hover {
+#landingpage .lpGuide__card p.lpGuide__card__text a:hover {
   color: #0094e7;
 }
-
-#landingpage .lpGuide--icon {
+#landingpage .lpGuide__icon {
   height: 64px;
   width: 64px;
 }
-
-#landingpage .lpGuide--conditions {
+#landingpage .lpGuide__conditions {
   background-color: #f8f8f8;
   height: 56px;
 }
-
-#landingpage .lpGuide--conditions a {
+#landingpage .lpGuide__conditions a {
   font-size: 14px;
   line-height: 56px;
   font-weight: 500;
   color: #a4a4a4;
 }
-
-#landingpage .lpGuide--conditions a:hover {
+#landingpage .lpGuide__conditions a:hover {
   color: #00275b;
 }
-
 #landingpage .lpCarousel .lpButton {
   margin: 64px auto 0;
   display: block;
 }
-
 #landingpage .lpScreen {
   padding-top: 65px;
   padding-right: 211px;
   padding-bottom: 65px;
   padding-left: 211px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #ffffff), to(#f8f8f8));
+  flex-direction: column;
   background: linear-gradient(to bottom, #ffffff 70%, #f8f8f8 100%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 48px;
   text-align: center;
 }
-
 #landingpage .lpScreen h2 {
   font-size: 30px;
   line-height: 37.5px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #00275b;
 }
-
 #landingpage .lpScreen p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 0;
 }
-
-#landingpage .lpScreen--img {
-  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+#landingpage .lpScreen__img {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
 }
-
 #landingpage .lpFaq {
   padding-top: 65px;
   padding-right: 65px;
   padding-bottom: 65px;
   padding-left: 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 48px;
 }
-
 #landingpage .lpFaq h2 {
   font-size: 30px;
   line-height: 37.5px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   color: #00275b;
 }
-
-#landingpage .lpFaq--units {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#landingpage .lpFaq__units {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 16px;
   width: 100%;
 }
-
-#landingpage .lpFaq--box {
+#landingpage .lpFaq__box {
   background-color: #ffffff;
   border-radius: 8px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 16px;
   cursor: pointer;
-  -webkit-transition: -webkit-box-shadow 500ms;
-  transition: -webkit-box-shadow 500ms;
   transition: box-shadow 500ms;
-  transition: box-shadow 500ms, -webkit-box-shadow 500ms;
 }
-
-#landingpage .lpFaq--box:hover {
-  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+#landingpage .lpFaq__box:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-#landingpage .lpFaq--box--handle {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#landingpage .lpFaq__box__handle {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 16px;
 }
-
-#landingpage .lpFaq--box--handle h3 {
+#landingpage .lpFaq__box__handle h3 {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #0094e7;
 }
-
-#landingpage .lpFaq--box--content {
+#landingpage .lpFaq__box__content {
   padding: 0 36px;
   max-height: 0;
   overflow: hidden;
   will-change: max-height;
-  -webkit-transition: opacity 500ms, max-height 500ms, padding 500ms;
   transition: opacity 500ms, max-height 500ms, padding 500ms;
   opacity: 0;
 }
-
-#landingpage .lpFaq--box--content p {
+#landingpage .lpFaq__box__content p {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 0;
 }
-
-#landingpage .lpFaq--box__active .lpFaq--box--content {
+#landingpage .lpFaq__box--active .lpFaq__box__content {
   padding: 8px 36px 20px;
   opacity: 1;
 }
-
-#landingpage .lpFaq--box__active .lpFaq--box--icon {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+#landingpage .lpFaq__box--active .lpFaq__box__icon {
+  transform: rotate(0deg);
 }
-
-#landingpage .lpFaq--box--icon {
+#landingpage .lpFaq__box__icon {
   width: 20px;
   min-width: 20px;
   height: 20px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
+  transform: rotate(180deg);
   transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
 }
-
 #landingpage .lpButton {
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   height: 52px;
   line-height: 52px;
   font-size: 16px;
@@ -1527,69 +1251,56 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   display: inline-block;
   border: none;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   cursor: pointer;
   width: 172px;
   background-color: #A1C900;
   color: #ffffff;
 }
-
 #landingpage .lpButton:hover {
   background-color: #88aa00;
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
 }
-
 #landingpage .lpButton:active {
   background-color: #708c00;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#landingpage .lpButton__disabled {
+#landingpage .lpButton--disabled {
   background-color: rgba(161, 201, 0, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
-.layout-0 #landingpage .lpHeader--content {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.layout-0 #landingpage .lpHeader__content {
+  justify-content: space-between;
 }
-
-.layout-0 #landingpage .lpHeader--front {
+.layout-0 #landingpage .lpHeader__front {
   width: 100%;
 }
-
-.layout-0 #landingpage .lpHeader--return {
+.layout-0 #landingpage .lpHeader__return {
   top: 4%;
 }
-
-.layout-0 #landingpage .lpGuide--card--headline {
+.layout-0 #landingpage .lpGuide__card__headline {
   height: 30px;
 }
 
 @media only screen and (max-width: 1035px) {
-  .mobile #landingpage .lpHeader--return,
-  .mobileapp #landingpage .lpHeader--return {
+  .mobile #landingpage .lpHeader__return,
+  .mobileapp #landingpage .lpHeader__return {
     top: 4%;
   }
-  .mobile #landingpage .lpHeader--front,
-  .mobileapp #landingpage .lpHeader--front {
+  .mobile #landingpage .lpHeader__front,
+  .mobileapp #landingpage .lpHeader__front {
     width: 100%;
   }
-  .mobile #landingpage .lpBrands--icon,
-  .mobileapp #landingpage .lpBrands--icon {
+  .mobile #landingpage .lpBrands__icon,
+  .mobileapp #landingpage .lpBrands__icon {
     width: 100%;
   }
-  .mobile #landingpage .lpGuide--card--headline,
-  .mobileapp #landingpage .lpGuide--card--headline {
+  .mobile #landingpage .lpGuide__card__headline,
+  .mobileapp #landingpage .lpGuide__card__headline {
     height: 40px;
   }
 }
-
 @media only screen and (max-width: 845px) {
   .mobile #landingpage .lpHeader,
   .mobileapp #landingpage .lpHeader {
@@ -1598,41 +1309,38 @@ button.swiper-pagination-bullet {
     padding-bottom: 65px;
     padding-left: 65px;
   }
-  .mobile #landingpage .lpHeader--image,
-  .mobileapp #landingpage .lpHeader--image {
-    -webkit-transform: translate(0, 4%) scale(1);
-            transform: translate(0, 4%) scale(1);
+  .mobile #landingpage .lpHeader__image,
+  .mobileapp #landingpage .lpHeader__image {
+    transform: translate(0, 4%) scale(1);
   }
-  .mobile #landingpage .lpHeader--caption,
-  .mobileapp #landingpage .lpHeader--caption {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+  .mobile #landingpage .lpHeader__caption,
+  .mobileapp #landingpage .lpHeader__caption {
+    flex-basis: 60%;
   }
-  .mobile #landingpage .lpHeader--caption h1,
-  .mobileapp #landingpage .lpHeader--caption h1 {
+  .mobile #landingpage .lpHeader__caption h1,
+  .mobileapp #landingpage .lpHeader__caption h1 {
     font-size: 36px;
     line-height: 45px;
     font-weight: 700;
   }
-  .mobile #landingpage .lpHeader--caption p,
-  .mobileapp #landingpage .lpHeader--caption p {
+  .mobile #landingpage .lpHeader__caption p,
+  .mobileapp #landingpage .lpHeader__caption p {
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;
   }
-  .mobile #landingpage .lpHeader--list li,
-  .mobileapp #landingpage .lpHeader--list li {
+  .mobile #landingpage .lpHeader__list li,
+  .mobileapp #landingpage .lpHeader__list li {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
   }
-  .mobile #landingpage .lpHeader--image,
-  .mobileapp #landingpage .lpHeader--image {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+  .mobile #landingpage .lpHeader__image,
+  .mobileapp #landingpage .lpHeader__image {
+    flex-basis: 40%;
   }
-  .mobile #landingpage .lpGuide--card--headline,
-  .mobileapp #landingpage .lpGuide--card--headline {
+  .mobile #landingpage .lpGuide__card__headline,
+  .mobileapp #landingpage .lpGuide__card__headline {
     height: 50px;
   }
   .mobile #landingpage .lpGuide h2,
@@ -1648,7 +1356,6 @@ button.swiper-pagination-bullet {
     padding-left: 65px;
   }
 }
-
 @media only screen and (max-width: 665px) {
   .mobile #landingpage .lpHeader,
   .mobileapp #landingpage .lpHeader {
@@ -1659,41 +1366,32 @@ button.swiper-pagination-bullet {
     background-attachment: unset;
     display: block;
   }
-  .mobile #landingpage .lpHeader--content,
-  .mobileapp #landingpage .lpHeader--content {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .mobile #landingpage .lpHeader__content,
+  .mobileapp #landingpage .lpHeader__content {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 65px;
   }
-  .mobile #landingpage .lpHeader--caption,
-  .mobileapp #landingpage .lpHeader--caption {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .mobile #landingpage .lpHeader__caption,
+  .mobileapp #landingpage .lpHeader__caption {
+    flex-basis: 100%;
+    align-items: center;
   }
-  .mobile #landingpage .lpHeader--caption h1,
-  .mobileapp #landingpage .lpHeader--caption h1 {
+  .mobile #landingpage .lpHeader__caption h1,
+  .mobileapp #landingpage .lpHeader__caption h1 {
     padding-top: 24px;
   }
-  .mobile #landingpage .lpHeader--caption h1, .mobile #landingpage .lpHeader--caption p,
-  .mobileapp #landingpage .lpHeader--caption h1,
-  .mobileapp #landingpage .lpHeader--caption p {
+  .mobile #landingpage .lpHeader__caption h1, .mobile #landingpage .lpHeader__caption p,
+  .mobileapp #landingpage .lpHeader__caption h1,
+  .mobileapp #landingpage .lpHeader__caption p {
     text-align: center;
   }
-  .mobile #landingpage .lpHeader--image,
-  .mobileapp #landingpage .lpHeader--image {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .mobile #landingpage .lpHeader__image,
+  .mobileapp #landingpage .lpHeader__image {
+    flex-basis: 100%;
   }
-  .mobile #landingpage .lpHeader--return,
-  .mobileapp #landingpage .lpHeader--return {
+  .mobile #landingpage .lpHeader__return,
+  .mobileapp #landingpage .lpHeader__return {
     top: 4.5%;
   }
   .mobile #landingpage .lpBrands,
@@ -1703,27 +1401,21 @@ button.swiper-pagination-bullet {
     padding-bottom: 30px;
     padding-left: 0px;
   }
-  .mobile #landingpage .lpGuide--cards,
-  .mobileapp #landingpage .lpGuide--cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .mobile #landingpage .lpGuide__cards,
+  .mobileapp #landingpage .lpGuide__cards {
+    flex-direction: column;
+    align-items: center;
     gap: 65px;
   }
-  .mobile #landingpage .lpGuide--card,
-  .mobileapp #landingpage .lpGuide--card {
+  .mobile #landingpage .lpGuide__card,
+  .mobileapp #landingpage .lpGuide__card {
     max-width: 400px;
   }
-  .mobile #landingpage .lpGuide--card--headline,
-  .mobileapp #landingpage .lpGuide--card--headline {
+  .mobile #landingpage .lpGuide__card__headline,
+  .mobileapp #landingpage .lpGuide__card__headline {
     height: unset;
   }
 }
-
 @media only screen and (max-width: 450px) {
   .mobile #landingpage .lpHeader,
   .mobileapp #landingpage .lpHeader {
@@ -1738,17 +1430,12 @@ button.swiper-pagination-bullet {
     padding-right: 25px;
     padding-bottom: 30px;
     padding-left: 25px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     gap: 32px;
   }
-  .mobile #landingpage .lpGuide--cards,
-  .mobileapp #landingpage .lpGuide--cards {
+  .mobile #landingpage .lpGuide__cards,
+  .mobileapp #landingpage .lpGuide__cards {
     padding-top: 65px;
     padding-right: 25px;
     padding-bottom: 65px;
