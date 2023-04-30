@@ -9,7 +9,7 @@
         position: relative
         background: linear-gradient(to  bottom,  $white 70%, $grey0 100%)
         border-radius: 4px
-        padding: 60px
+        padding: 60px 40px
         overflow: hidden
 
         h2
@@ -34,7 +34,7 @@
             height: auto
         
 
-        a.swiper-slide
+        .swiper-slide
             border-radius: 6px
             cursor: pointer
             height: auto
@@ -43,7 +43,7 @@
             text-align: center
             padding: 24px
             @include flexVert
-            gap: 16px
+            gap: 12px
             justify-content: space-between
             text-decoration: none
 
@@ -54,11 +54,8 @@
                 color: $grey6
                 transition: all 300ms ease-in-out
 
-            p.swiper-product-name
-                min-height: 84px
-
             .swiper-product-img
-                margin-bottom: 10px
+                margin-bottom: 12px
 
             p.swiper-product-cprice
                 @include type(14px, 1.5, 400)
@@ -69,6 +66,7 @@
             p.swiper-product-price
                 color: $red
                 @include type(14px, 1.5, 400)
+                margin-top: auto
 
             &:hover
                 box-shadow: 0 2px 6px 0px rgba(0,0,0,0.15)
@@ -203,7 +201,7 @@
                 .swiper-pagination
                     display: none
 
-                a.swiper-slide:hover
+                .swiper-slide:hover
                     box-shadow: none
 
 @media only screen and (max-width: 560px)
@@ -211,8 +209,5 @@
     .mobileapp #landingpage
         .lpCarousel
             .swiper
-                a.swiper-slide
+                .swiper-slide
                     justify-content: flex-start
-
-                    p.swiper-product-name
-                        min-height: unset
