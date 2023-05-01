@@ -10494,9 +10494,9 @@ function runCarousel() {
                 },
 
                 980: {
-                    slidesPerView: ($("#body2.layout-1").length) ? 6 : 5,
+                    slidesPerView: ($("#testLayout.layout-1").length) ? 6 : 5,
                     spaceBetween: 20,
-                    slidesPerGroup: ($("#body2.layout-1").length) ? 6 : 5
+                    slidesPerGroup: ($("#testLayout.layout-1").length) ? 6 : 5
                 }
             },
             on: {
